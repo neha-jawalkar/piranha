@@ -32,8 +32,9 @@ void Profiler::accumulate(std::string tag) {
         double us_elapsed = std::chrono::duration_cast<std::chrono::microseconds>(
             std::chrono::system_clock::now() - start_time
         ).count();
-
         accumulators[tag] += us_elapsed / 1000.0;
+        // if(tag.find("forward") != std::string::npos) 
+            // std::cout << tag << " " << us_elapsed / 1000.0 << std::endl;
         total += us_elapsed / 1000.0;
     }
 }

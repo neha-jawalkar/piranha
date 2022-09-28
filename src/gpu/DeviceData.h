@@ -37,6 +37,8 @@ auto evenView = getEvens(actual_data);
 #include <thrust/fill.h>
 #include <thrust/functional.h>
 #include <thrust/transform.h>
+#include <thrust/random.h>
+
 
 #include "../util/connect.h"
 #include "../util/Profiler.h"
@@ -47,6 +49,28 @@ extern Profiler memory_profiler;
 
 template<typename T>
 using BufferIterator = thrust::detail::normal_iterator<thrust::device_ptr<T> >;
+
+// unsigned int times_called = 0;
+
+
+struct prg
+{
+    uint64_t a, b;
+
+    __host__ __device__
+    prg(uint64_t _a=0.f, uint64_t _b=1.f) : a(_a), b(_b) {};
+
+    __host__ __device__
+        uint64_t operator()(const unsigned int n) const
+        {
+            thrust::default_random_engine rng;
+            thrust::uniform_int_distribution<float> dist(a, b);
+            rng.discard(n);
+
+            return dist(rng);
+        }
+};
+
 
 template<typename T, typename Iterator>
 class DeviceDataBase {
@@ -83,6 +107,7 @@ class DeviceDataBase {
         void fill(T val) {
             thrust::fill(begin(), end(), val);
         }
+
 
         void transmit(size_t party) {
 
@@ -233,10 +258,14 @@ class DeviceData<T, BufferIterator<T> > : public DeviceDataBase<T, BufferIterato
 
     public:
 
+        static unsigned int times_called;
+        static double elapsed;
+
         DeviceData() : data(0) {
             
             // set iterators after data is initialized
             this->set(data.begin(), data.end());
+            // times_called = 0;
         }
 
         DeviceData(BufferIterator<T> _first, BufferIterator<T> _last) :
@@ -249,14 +278,14 @@ class DeviceData<T, BufferIterator<T> > : public DeviceDataBase<T, BufferIterato
 
         DeviceData(int n) : data(n) {
             this->set(data.begin(), data.end());
-
+            // times_called = 0;
             memory_profiler.track_alloc(n * sizeof(T));
         }
 
         DeviceData(std::initializer_list<T> il) : data(il.size()) {
             thrust::copy(il.begin(), il.end(), data.begin());
             this->set(data.begin(), data.end());
-
+            // times_called = 0;
             memory_profiler.track_alloc(il.size() * sizeof(T));
         }
 
@@ -271,8 +300,30 @@ class DeviceData<T, BufferIterator<T> > : public DeviceDataBase<T, BufferIterato
             return data;
         }
 
+        void fill_with_random() {
+            // auto start = std::chrono::high_resolution_clock::now();
+            thrust::counting_iterator<unsigned int> index_sequence_begin(times_called);
+            thrust::transform(index_sequence_begin,
+                index_sequence_begin + data.size(),
+                data.begin(),
+                prg(0, static_cast<uint64_t>(-1)));
+            times_called += data.size();
+            // cudaDeviceSynchronize();
+            // auto end = std::chrono::high_resolution_clock::now();
+            // elapsed += std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+            // std::cout << "Time for filling arrays: " << std::chrono::duration_cast<std::chrono::milliseconds>(elapsed).count() << std::endl;
+
+            // elapsed += std::chrono::duration_cast<std::chrono::microseconds>(
+            // std::chrono::system_clock::now() - start_time).count();
+        }
+
     private:
 
         thrust::device_vector<T> data;
 };
 
+template <typename T>
+unsigned int DeviceData<T>::times_called = 0ULL;
+
+template <typename T>
+double DeviceData<T>::elapsed = 0.0;

@@ -321,8 +321,11 @@ void train(NeuralNetwork<T, Share> *net, NeuralNetConfig *config, std::string ru
                 double fw_ms = toplevel_profiler.get_elapsed("fw-pass");
                 
                 printf("inference iteration (ms),%f\n", fw_ms);
-                printf("inference TX comm (bytes),%d\n", comm_profiler.get_comm_tx_bytes());
-                printf("inference RX comm (bytes),%d\n", comm_profiler.get_comm_rx_bytes());
+                printf("inference TX comm (MB),%lf\n", ((double)comm_profiler.get_comm_tx_bytes()) / 1024.0 / 1024.0);
+                printf("inference RX comm (MB),%lf\n", ((double)comm_profiler.get_comm_rx_bytes()) / 1024.0 / 1024.0);
+                printf("randomness generation (ms),%lf\n", DeviceData<T>::elapsed);
+                // printf("inference TX comm (bytes),%d\n", comm_profiler.get_comm_tx_bytes());
+                // printf("inference RX comm (bytes),%d\n", comm_profiler.get_comm_rx_bytes());
             }
 
             if (piranha_config["eval_fw_peak_memory"]) {

@@ -28,6 +28,7 @@ class TPCBase {
         size_t size() const;
         void zero();
         void fill(T val);
+        void fill_with_random();
         void setPublic(std::vector<double> &v);
         DeviceData<T, I> *getShare(int i);
         const DeviceData<T, I> *getShare(int i) const;

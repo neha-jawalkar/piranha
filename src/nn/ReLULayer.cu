@@ -52,7 +52,7 @@ void ReLULayer<T, Share>::forward(const Share<T> &input) {
 
     if (piranha_config["debug_all_forward"]) {
         printf("layer %d\n", this->layerNum);
-        //printShareTensor(*const_cast<Share<T> *>(&input), "fw pass input (n=1)", 1, 1, 1, input.size() / conf.batchSize);
+        // printShareTensor(*const_cast<Share<T> *>(&input), "fw pass input (n=1)", 1, 1, 1, input.size() / conf.batchSize);
     }
 
 	log_print("ReLU.forward");
@@ -74,7 +74,7 @@ void ReLULayer<T, Share>::forward(const Share<T> &input) {
     debug_profiler.accumulate("relu-fw-fprop");
     this->layer_profiler.accumulate("relu-forward");
     relu_profiler.accumulate("relu-forward");
-
+    std::cout << "relu: " << this->layer_profiler.get_elapsed("relu-forward") << std::endl;
     if (piranha_config["debug_all_forward"]) {
         //printShareTensor(*const_cast<Share<T> *>(&activations), "fw pass activations (n=1)", 1, 1, 1, activations.size() / conf.batchSize);
         std::vector<double> vals(activations.size());

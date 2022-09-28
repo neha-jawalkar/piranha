@@ -3,6 +3,9 @@
 
 #include "../gpu/DeviceData.h"
 #include "../globals.h"
+#include <cstdlib>
+#include <chrono>
+
 
 class Precompute
 {
@@ -26,10 +29,22 @@ class Precompute
             // assert(x.size() == imageWidth * imageHeight * Din * batchSize && "Incorrect x input for conv beaver triple");
             // assert(y.size() == filterSize * filterSize * Din * Dout && "Incorrect y input for conv beaver triple");
             // assert(z.size() == outputWidth * outputHeight * Dout * batchSize && "Incorrect z input for conv beaver triple");
+            // auto start = std::chrono::high_resolution_clock::now();
 
-            x.fill(0);
-            y.fill(0);
-            z.fill(0);
+            // for(int i = 0; i < x.size(); i++) (*(x.getShare(0))).raw()[i] = rand();
+            // for(int i = 0; i < y.size(); i++) (*(y.getShare(0))).raw()[i] = rand();
+            // for(int i = 0; i < z.size(); i++) (*(z.getShare(0))).raw()[i] = rand();
+
+            // auto end = std::chrono::high_resolution_clock::now();
+            // auto elapsed = end - start;
+            // std::cout << "Time for filling arrays: " << std::chrono::duration_cast<std::chrono::milliseconds>(elapsed).count() << std::endl;
+
+            // x.fill(0);
+            // y.fill(0);
+            // z.fill(0);
+            x.fill_with_random();
+            y.fill_with_random();
+            z.fill_with_random();
         }
 
         template<typename T, typename Share>
@@ -83,9 +98,14 @@ class Precompute
 
             size_t cols = transpose_b ? b_rows : b_cols;
 
-            x.fill(1);
-            y.fill(1);
-            z.fill(shared);
+            // x.fill(1);
+            // y.fill(1);
+            // z.fill(shared);
+
+            x.fill_with_random();
+            y.fill_with_random();
+            z.fill_with_random();
+
         }
 
         template<typename T, typename Share>

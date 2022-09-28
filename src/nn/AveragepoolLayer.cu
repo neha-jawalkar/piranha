@@ -82,6 +82,8 @@ void AveragepoolLayer<T, Share>::forward(const Share<T> &input) {
 
     this->layer_profiler.accumulate("averagepool-forward");
     averagepool_profiler.accumulate("averagepool-forward");
+    std::cout << "averagepool: " << this->layer_profiler.get_elapsed("averagepool-forward") << std::endl;
+
 
     if (piranha_config["debug_all_forward"]) {
         //printShareTensor(*const_cast<Share<T> *>(&activations), "fw pass activations (n=1)", 1, 1, 1, activations.size() / conf.batchSize);

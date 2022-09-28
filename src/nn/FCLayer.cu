@@ -117,6 +117,7 @@ void FCLayer<T, Share>::forward(const Share<T> &input) {
     
     debug_profiler.accumulate("fc-fw");
     this->layer_profiler.accumulate("fc-forward");
+    std::cout << "fc: " << this->layer_profiler.get_elapsed("fc-forward") << std::endl;
 
     if (piranha_config["debug_all_forward"]) {
         std::vector<double> vals(activations.size());

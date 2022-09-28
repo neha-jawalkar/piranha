@@ -63,7 +63,7 @@
     "test_only": false,
 
     "_desc_inference_only": "Only run inference (forward pass), not backward pass training",
-    "inference_only": false,
+    "inference_only": true,
 
     "_desc_no_test": "Do not run testing after training epochs",
     "no_test": false,
@@ -84,10 +84,10 @@
     "eval_accuracy": false,
 
     "_desc_eval_inference_stats": "Evaluation: print runtime and communication statistics for each inference forward pass",
-    "eval_inference_stats": false,
+    "eval_inference_stats": true,
 
     "_desc_eval_train_stats": "Evaluation: print runtime and communication statistics for each training forward-backward pass",
-    "eval_train_stats": true,
+    "eval_train_stats": false,
 
     "_desc_eval_fw_peak_memory": "Evaluation: print peak memory usage during each forward pass",
     "eval_fw_peak_memory": false,

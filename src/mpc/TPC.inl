@@ -106,6 +106,11 @@ void TPCBase<T, I>::fill(T val) {
 }
 
 template<typename T, typename I>
+void TPCBase<T, I>::fill_with_random() {
+    shareA->fill_with_random(/*partyNum == PARTY_A ? val : 0*/);
+}
+
+template<typename T, typename I>
 void TPCBase<T, I>::setPublic(std::vector<double> &v) {
     std::vector<T> shifted_vals;
     for (double f : v) {
@@ -654,6 +659,9 @@ void localFprop(const TPC<T> &A, const TPC<T> &B, TPC<T> &C,
         Dout, filterHeight, filterWidth,
         paddingHeight, paddingWidth,
         stride, dilation);
+
+    // std::cout << (*(x.getShare(0))).raw()[0] << " " << (*(y.getShare(0))).raw()[0] << " " << (*(z.getShare(0))).raw()[0] << std::endl;
+
     DeviceData<T> e(x.size()), f(y.size()), temp(z.size());
 
     x += A; y += B;
