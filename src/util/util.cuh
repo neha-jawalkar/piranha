@@ -73,7 +73,7 @@ template<typename T, typename I, template<typename, typename...> typename Share>
 void copyToHost(Share<T, I> &share, std::vector<double> &host_data, bool convertFixed=true) {
 
     DeviceData<T> db(share.size());
-    // reconstruct(share, db);
+    reconstruct(share, db);
 
     copyToHost(db, host_data, convertFixed);
 }
@@ -147,7 +147,8 @@ void printShareFinite(Share<T, I> &data, const char *name, size_t size, bool con
     //assert(data.size() >= size && "print finite size mismatch");
 
     std::vector<double> host_data(data.size());
-    copyToHost(data, host_data, convertFixed);
+    copyToHost(*data.getShare(0), host_data, convertFixed);
+    // copyToHost(data, host_data, convertFixed);
 
     std::cout << name << ":" << std::endl;
     int offset = 0;

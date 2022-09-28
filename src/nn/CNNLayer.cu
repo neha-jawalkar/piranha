@@ -108,8 +108,13 @@ void CNNLayer<T, Share>::forward(const Share<T> &input) {
     //DeviceBuffer<T>::printMemUsage();
 
     if (piranha_config["debug_all_forward"]) {
+        printShareFinite(*const_cast<Share<T> *>(&activations), "conv2d fw pass activations", 10);
+
         // printDeviceData(activations.getShare(0), "cnn_result", false);
-        printShareTensor(*const_cast<Share<T> *>(&activations), "fw pass activations (n=1)", 1, 1, 1, activations.size() / conf.batchSize);
+        // printShareTensor(*const_cast<Share<T> *>(&input), "fw pass input (n=1)", 1, 1, 1, 10);
+        // printShareTensor(*const_cast<Share<T> *>(&weights), "fw pass weights (n=1)", 1, 1, 1, 10);
+
+        // printShareTensor(*const_cast<Share<T> *>(&activations), "fw pass activations (n=1)", 1, 1, 1, 10);
         std::vector<double> vals(activations.size());
         copyToHost(activations, vals);
         
