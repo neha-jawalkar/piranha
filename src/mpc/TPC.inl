@@ -697,7 +697,7 @@ void localFprop(const TPC<T> &A, const TPC<T> &B, TPC<T> &C,
     *C.getShare(0) -= temp;
 
     cudaThreadSynchronize();
-    printShareFinite(*const_cast<Share<T> *>(&C), "inside convolution", 10);
+    printShareFinite(*const_cast<TPC<T> *>(&C), "inside convolution", 10);
 
     // std::cout << (*(C.getShare(0))).raw()[0] << std::endl;
 
