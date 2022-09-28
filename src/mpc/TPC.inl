@@ -660,7 +660,7 @@ void localFprop(const TPC<T> &A, const TPC<T> &B, TPC<T> &C,
         paddingHeight, paddingWidth,
         stride, dilation);
 
-    // std::cout << (*(x.getShare(0))).raw()[0] << " " << (*(y.getShare(0))).raw()[0] << " " << (*(z.getShare(0))).raw()[0] << std::endl;
+    std::cout << (*(x.getShare(0))).raw()[0] << " " << (*(y.getShare(0))).raw()[0] << " " << (*(z.getShare(0))).raw()[0] << std::endl;
 
     DeviceData<T> e(x.size()), f(y.size()), temp(z.size());
 
