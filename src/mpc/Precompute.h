@@ -39,12 +39,12 @@ class Precompute
             // auto elapsed = end - start;
             // std::cout << "Time for filling arrays: " << std::chrono::duration_cast<std::chrono::milliseconds>(elapsed).count() << std::endl;
 
-            // x.fill(0);
-            // y.fill(0);
-            // z.fill(0);
-            x.fill_with_random();
-            y.fill_with_random();
-            z.fill_with_random();
+            x.fill(0);
+            y.fill(0);
+            z.fill(0);
+            // x.fill_with_random();
+            // y.fill_with_random();
+            // z.fill_with_random();
         }
 
         template<typename T, typename Share>
@@ -98,13 +98,13 @@ class Precompute
 
             size_t cols = transpose_b ? b_rows : b_cols;
 
-            // x.fill(1);
-            // y.fill(1);
-            // z.fill(shared);
+            x.fill(1);
+            y.fill(1);
+            z.fill(shared);
 
-            x.fill_with_random();
-            y.fill_with_random();
-            z.fill_with_random();
+            // x.fill_with_random();
+            // y.fill_with_random();
+            // z.fill_with_random();
 
         }
 
