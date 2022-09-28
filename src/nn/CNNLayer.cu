@@ -100,6 +100,9 @@ void CNNLayer<T, Share>::forward(const Share<T> &input) {
     debug_profiler.accumulate("cnn-fw-fprop");
     this->layer_profiler.accumulate("cnn-fw-fprop");
     std::cout << "conv2d: " << this->layer_profiler.get_elapsed("cnn-fw-fprop") << std::endl;
+    // std::cout << (*(input.getShare(0))).raw()[0] << std::endl;
+    // std::cout << (*(weights.getShare(0))).raw()[0] << std::endl;
+    // std::cout << (*(activations.getShare(0))).raw()[0] << std::endl;
 
     //std::cout << "convolution forward done" << std::endl << std::endl;
     //DeviceBuffer<T>::printMemUsage();
@@ -113,6 +116,7 @@ void CNNLayer<T, Share>::forward(const Share<T> &input) {
                 *std::min_element(vals.begin(), vals.end()),
                 std::accumulate(vals.begin(), vals.end(), 0.0) / static_cast<float>(vals.size()), 
                 *std::max_element(vals.begin(), vals.end()));
+        printf("%lf %lf %lf\n", vals[0], vals[1], vals[2]);
     }
 }
 

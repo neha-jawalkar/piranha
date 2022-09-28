@@ -105,7 +105,7 @@
     "print_deltas": false,
     
     "_desc_debug_all_forward": "Print debug information for all layer forward passes",
-    "debug_all_forward": false,
+    "debug_all_forward": true,
 
     "_desc_debug_all_backward": "Print debug information for all layer backward passes",
     "debug_all_backward": false

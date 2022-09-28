@@ -73,7 +73,7 @@ template<typename T, typename I, template<typename, typename...> typename Share>
 void copyToHost(Share<T, I> &share, std::vector<double> &host_data, bool convertFixed=true) {
 
     DeviceData<T> db(share.size());
-    reconstruct(share, db);
+    // reconstruct(share, db);
 
     copyToHost(db, host_data, convertFixed);
 }
