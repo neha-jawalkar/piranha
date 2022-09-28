@@ -660,7 +660,7 @@ void localFprop(const TPC<T> &A, const TPC<T> &B, TPC<T> &C,
         paddingHeight, paddingWidth,
         stride, dilation);
 
-    std::cout << (*(x.getShare(0))).raw()[0] << " " << (*(y.getShare(0))).raw()[0] << " " << (*(z.getShare(0))).raw()[0] << std::endl;
+    // std::cout << (*(x.getShare(0))).raw()[0] << " " << (*(y.getShare(0))).raw()[0] << " " << (*(z.getShare(0))).raw()[0] << std::endl;
 
     DeviceData<T> e(x.size()), f(y.size()), temp(z.size());
 
@@ -670,6 +670,8 @@ void localFprop(const TPC<T> &A, const TPC<T> &B, TPC<T> &C,
 
     C.zero();
     C += z;
+    std::cout << (*(C.getShare(0))).raw()[0] << std::endl;
+
 
     gpu::conv_fprop(&e, &f, &temp, 
         batchSize, imageHeight, imageWidth, Din,
@@ -695,6 +697,8 @@ void localFprop(const TPC<T> &A, const TPC<T> &B, TPC<T> &C,
     *C.getShare(0) -= temp;
 
     cudaThreadSynchronize();
+    std::cout << (*(C.getShare(0))).raw()[0] << std::endl;
+
 }
 
 template<typename T>
