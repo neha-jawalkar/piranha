@@ -301,16 +301,16 @@ class DeviceData<T, BufferIterator<T> > : public DeviceDataBase<T, BufferIterato
         }
 
         void fill_with_random() {
-            // auto start = std::chrono::high_resolution_clock::now();
+            auto start = std::chrono::high_resolution_clock::now();
             thrust::counting_iterator<unsigned int> index_sequence_begin(times_called);
             thrust::transform(index_sequence_begin,
                 index_sequence_begin + data.size(),
                 data.begin(),
                 prg(0, static_cast<uint64_t>(-1)));
             times_called += data.size();
-            // cudaDeviceSynchronize();
-            // auto end = std::chrono::high_resolution_clock::now();
-            // elapsed += std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+            cudaDeviceSynchronize();
+            auto end = std::chrono::high_resolution_clock::now();
+            elapsed += std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
             // std::cout << "Time for filling arrays: " << std::chrono::duration_cast<std::chrono::milliseconds>(elapsed).count() << std::endl;
 
             // elapsed += std::chrono::duration_cast<std::chrono::microseconds>(
