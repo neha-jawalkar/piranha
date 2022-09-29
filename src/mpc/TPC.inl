@@ -374,27 +374,27 @@ void TPC<T, BufferIterator<T> >::resize(size_t n) {
 
 template<typename T, typename I>
 void dividePublic(TPC<T, I> &a, T denominator) {
-    printShareFinite(*const_cast<TPC<T> *>(&a), "a inside divide public", 10);
+    // printShareFinite(*const_cast<TPC<T> *>(&a), "a inside divide public", 10);
 
     TPC<T> r(a.size()), rPrime(a.size());
     PrecomputeObject.getDividedShares<T, TPC<T> >(r, rPrime, denominator, a.size()); 
     a -= rPrime;
     
-    printShareFinite(*const_cast<TPC<T> *>(&rPrime), "rPrime inside divide public", 10);
+    // printShareFinite(*const_cast<TPC<T> *>(&rPrime), "rPrime inside divide public", 10);
 
     DeviceData<T> reconstructed(a.size());
     reconstruct(a, reconstructed);
     
-    printDeviceDataFinite(reconstructed, "reconstructed a inside divide public", 10);
-    std::cout << "denominator: " << denominator << std::endl;
+    // printDeviceDataFinite(reconstructed, "reconstructed a inside divide public", 10);
+    // std::cout << "denominator: " << denominator << std::endl;
     reconstructed /= denominator;
-    printDeviceDataFinite(reconstructed, "divided a inside divide public", 10);
+    // printDeviceDataFinite(reconstructed, "divided a inside divide public", 10);
 
     a.zero();
     a += r;
-    printShareFinite(*const_cast<TPC<T> *>(&r), "r inside divide public", 10);
+    // printShareFinite(*const_cast<TPC<T> *>(&r), "r inside divide public", 10);
     a += reconstructed;
-    printShareFinite(*const_cast<TPC<T> *>(&a), "output inside divide public", 10);
+    // printShareFinite(*const_cast<TPC<T> *>(&a), "output inside divide public", 10);
 }
 
 template<typename T, typename I, typename I2>
@@ -706,7 +706,7 @@ void localFprop(const TPC<T> &A, const TPC<T> &B, TPC<T> &C,
     *C.getShare(0) -= temp;
 
     cudaThreadSynchronize();
-    printShareFinite(*const_cast<TPC<T> *>(&C), "inside convolution", 10);
+    // printShareFinite(*const_cast<TPC<T> *>(&C), "inside convolution", 10);
 
     // std::cout << (*(C.getShare(0))).raw()[0] << std::endl;
 
