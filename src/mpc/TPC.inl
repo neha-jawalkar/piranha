@@ -149,17 +149,17 @@ const DeviceData<T, I> *TPCBase<T, I>::getShare(int i) const {
 
 template<typename T, typename I>
 TPCBase<T, I> &TPCBase<T, I>::operator+=(const T rhs) {
-    if (partyNum == PARTY_A) {
-        *shareA += rhs;
-    }
+    // if (partyNum == PARTY_A) {
+    *shareA += rhs;
+    // }
     return *this;
 }
 
 template<typename T, typename I>
 TPCBase<T, I> &TPCBase<T, I>::operator-=(const T rhs) {
-    if (partyNum == PARTY_A) {
-        *shareA -= rhs;
-    }
+    // if (partyNum == PARTY_A) {
+    *shareA -= rhs;
+    // }
     return *this;
 }
 
@@ -178,18 +178,18 @@ TPCBase<T, I> &TPCBase<T, I>::operator>>=(const T rhs) {
 template<typename T, typename I>
 template<typename I2>
 TPCBase<T, I> &TPCBase<T, I>::operator+=(const DeviceData<T, I2> &rhs) {
-    if (partyNum == PARTY_A) {
-        *shareA += rhs;
-    }
+    // if (partyNum == PARTY_A) {
+    *shareA += rhs;
+    // }
     return *this;
 }
 
 template<typename T, typename I>
 template<typename I2>
 TPCBase<T, I> &TPCBase<T, I>::operator-=(const DeviceData<T, I2> &rhs) {
-    if (partyNum == PARTY_A) {
-        *shareA -= rhs;
-    }
+    // if (partyNum == PARTY_A) {
+    *shareA -= rhs;
+    // }
     return *this;
 }
 
@@ -203,9 +203,9 @@ TPCBase<T, I> &TPCBase<T, I>::operator*=(const DeviceData<T, I2> &rhs) {
 template<typename T, typename I>
 template<typename I2>
 TPCBase<T, I> &TPCBase<T, I>::operator^=(const DeviceData<T, I2> &rhs) {
-    if (partyNum == PARTY_A) {
-        *shareA ^= rhs;
-    }
+    // if (partyNum == PARTY_A) {
+    *shareA ^= rhs;
+    // }
     return *this;
 }
 
