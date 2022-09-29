@@ -388,10 +388,13 @@ void dividePublic(TPC<T, I> &a, T denominator) {
     printDeviceDataFinite(reconstructed, "reconstructed a inside divide public", 10);
     std::cout << "denominator: " << denominator << std::endl;
     reconstructed /= denominator;
+    printDeviceDataFinite(reconstructed, "divided a inside divide public", 10);
 
     a.zero();
     a += r;
+    printShareFinite(*const_cast<TPC<T> *>(&r), "r inside divide public", 10);
     a += reconstructed;
+    printShareFinite(*const_cast<TPC<T> *>(&a), "output inside divide public", 10);
 }
 
 template<typename T, typename I, typename I2>
