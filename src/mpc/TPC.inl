@@ -385,7 +385,7 @@ void dividePublic(TPC<T, I> &a, T denominator) {
     DeviceData<T> reconstructed(a.size());
     reconstruct(a, reconstructed);
     
-    printShareFinite(*const_cast<TPC<T> *>(&a), "reconstructed a inside divide public (1)", 10);
+    printDeviceDataFinite(reconstructed, "reconstructed a inside divide public", 10);
     std::cout << "denominator: " << denominator << std::endl;
     reconstructed /= denominator;
 
