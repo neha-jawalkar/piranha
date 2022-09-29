@@ -374,6 +374,7 @@ void TPC<T, BufferIterator<T> >::resize(size_t n) {
 
 template<typename T, typename I>
 void dividePublic(TPC<T, I> &a, T denominator) {
+    printShareFinite(*const_cast<TPC<T> *>(&a), "inside divide public", 10);
 
     TPC<T> r(a.size()), rPrime(a.size());
     PrecomputeObject.getDividedShares<T, TPC<T> >(r, rPrime, denominator, a.size()); 
