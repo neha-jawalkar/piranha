@@ -374,14 +374,19 @@ void TPC<T, BufferIterator<T> >::resize(size_t n) {
 
 template<typename T, typename I>
 void dividePublic(TPC<T, I> &a, T denominator) {
-    printShareFinite(*const_cast<TPC<T> *>(&a), "inside divide public", 10);
+    printShareFinite(*const_cast<TPC<T> *>(&a), "a inside divide public", 10);
 
     TPC<T> r(a.size()), rPrime(a.size());
     PrecomputeObject.getDividedShares<T, TPC<T> >(r, rPrime, denominator, a.size()); 
     a -= rPrime;
     
+    printShareFinite(*const_cast<TPC<T> *>(&rPrime), "rPrime inside divide public", 10);
+
     DeviceData<T> reconstructed(a.size());
     reconstruct(a, reconstructed);
+    
+    printShareFinite(*const_cast<TPC<T> *>(&a), "reconstructed a inside divide public (1)", 10);
+    std::cout << "denominator: " << denominator << std::endl;
     reconstructed /= denominator;
 
     a.zero();
