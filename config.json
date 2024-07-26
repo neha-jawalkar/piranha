@@ -1,18 +1,18 @@
 {
     "_desc_num_parties": "Number of parties involved in the MPC computation. Should match compiled application protocol.",
-    "num_parties": 4,
+    "num_parties": 2,
 
     "_desc_party_ips": "IP addresses of each party, ordered by party number",
-    "party_ips": ["172.31.42.201", "172.31.42.203", "172.31.42.201", "172.31.42.203"],
+    "party_ips": ["172.31.42.201", "172.31.42.203"],
 
     "_desc_party_users": "Usernames for each party, ordered by party number. Can be used by scripts to SSH into machines if necessary to start piranha processes",
     "party_users": [],
 
     "_desc_run_unit_tests": "Run unit tests",
-    "run_unit_tests": true,
+    "run_unit_tests": false,
 
     "_desc_unit_test_only": "Only run unit tests, do not try to run any full Piranha applications",
-    "unit_test_only": true,
+    "unit_test_only": false,
 
     "_desc_debug_print": "Show debug output",
     "debug_print": false,
@@ -63,7 +63,7 @@
     "test_only": false,
 
     "_desc_inference_only": "Only run inference (forward pass), not backward pass training",
-    "inference_only": false,
+    "inference_only": true,
 
     "_desc_no_test": "Do not run testing after training epochs",
     "no_test": false,
@@ -84,7 +84,7 @@
     "eval_accuracy": true,
 
     "_desc_eval_inference_stats": "Evaluation: print runtime and communication statistics for each inference forward pass",
-    "eval_inference_stats": false,
+    "eval_inference_stats": true,
 
     "_desc_eval_train_stats": "Evaluation: print runtime and communication statistics for each training forward-backward pass",
     "eval_train_stats": false,
