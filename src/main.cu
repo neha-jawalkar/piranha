@@ -83,6 +83,7 @@ int main(int argc, char** argv) {
 
     // Start memory profiler and initialize communication between parties
     memory_profiler.start();
+    func_profiler.start();
 
     //XXX initializeCommunication(options.ip_file, partyNum);
     std::vector<std::string> party_ips;
@@ -310,7 +311,7 @@ void train(NeuralNetwork<T, Share> *net, NeuralNetConfig *config, std::string ru
             getBatch(train_labels, label_it, batch_labels);
 
             Profiler toplevel_profiler;
-
+            
             toplevel_profiler.start();
             net->forward(batch_data);
             toplevel_profiler.accumulate("fw-pass");
@@ -323,7 +324,7 @@ void train(NeuralNetwork<T, Share> *net, NeuralNetConfig *config, std::string ru
                 printf("inference iteration (ms),%f\n", fw_ms);
                 printf("inference TX comm (bytes),%d\n", comm_profiler.get_comm_tx_bytes());
                 printf("inference RX comm (bytes),%d\n", comm_profiler.get_comm_rx_bytes());
-                comm_profiler.dump_comm_rounds();
+                func_profiler.dump_comm_rounds();
             }
 
             if (piranha_config["eval_fw_peak_memory"]) {
