@@ -323,6 +323,7 @@ void train(NeuralNetwork<T, Share> *net, NeuralNetConfig *config, std::string ru
                 printf("inference iteration (ms),%f\n", fw_ms);
                 printf("inference TX comm (bytes),%d\n", comm_profiler.get_comm_tx_bytes());
                 printf("inference RX comm (bytes),%d\n", comm_profiler.get_comm_rx_bytes());
+                comm_profiler.dump_comm_rounds();
             }
 
             if (piranha_config["eval_fw_peak_memory"]) {

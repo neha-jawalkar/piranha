@@ -274,7 +274,7 @@ TEST(EvalTest, ReLU_2PC_Profiling) {
 
     std::vector<double> rnd_vals;
 
-    std::vector<int> N = {1, 10, 100, 1000, 10000, 100000};
+    std::vector<int> N = {1, 10, 100, 1000, 10000, 1000000};
     for (int i = 0; i < N.size(); i++) {
 
         int n = N[i];
@@ -288,13 +288,19 @@ TEST(EvalTest, ReLU_2PC_Profiling) {
 
         Profiler profiler;
         profiler.start();
+        comm_profiler.clear();
 
-        ReLU(a, c, dc);
+        for(int j = 0; j < 10; j++)
+            ReLU(a, c, dc);
 
         profiler.accumulate("relu");
 
         if (i == 0) continue; // sacrifice run to spin up GPU
         printf("2PC - relu (N=%d) - %f sec.\n", n, profiler.get_elapsed("relu") / 1000.0);
+        printf("TX comm (MB),%f\n", comm_profiler.get_comm_tx_bytes() / 1024.0 / 1024.0);
+    	printf("RX comm (MB),%f\n", comm_profiler.get_comm_rx_bytes() / 1024.0 / 1024.0);
+        double comm_ms = comm_profiler.get_elapsed("comm-time");
+        printf("ReLU comm (ms),%f\n", comm_ms);
     }
 }
 
