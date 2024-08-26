@@ -274,7 +274,7 @@ TEST(EvalTest, ReLU_2PC_Profiling) {
 
     std::vector<double> rnd_vals;
 
-    std::vector<int> N = {1, 10, 100, 1000, 10000, 1000000};
+    std::vector<int> N = {1, 10, 100, 1000, 10000, 1000000, 10000000};
     for (int i = 0; i < N.size(); i++) {
 
         int n = N[i];
