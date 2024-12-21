@@ -19,7 +19,7 @@ public:
         return precomputeSz;
     }
 
-    size_t clearSz()
+    void clearSz()
     {
         precomputeSz = 0;
     }
