@@ -299,7 +299,7 @@ void train(NeuralNetwork<T, Share> *net, NeuralNetConfig *config, std::string ru
         for (int i = 0; i < numIterations; i++) {
 
             comm_profiler.clear();
-            // PrecomputeObject.clearSz();
+            PrecomputeObject.clearSz();
 
             if (piranha_config["debug_print"]) {
                 printf("iteration,%d\n", i);
@@ -319,7 +319,7 @@ void train(NeuralNetwork<T, Share> *net, NeuralNetConfig *config, std::string ru
 
             updateAccuracy(net, batch_labels, correct);
 
-            // printf("Key size=%lu B\n", PrecomputeObject.getSz());
+            printf("Key size=%lu B\n", PrecomputeObject.getSz());
 
             if (piranha_config["eval_inference_stats"]) {
                 double fw_ms = toplevel_profiler.get_elapsed("fw-pass");
