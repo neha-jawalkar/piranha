@@ -3,7 +3,7 @@
     "num_parties": 2,
 
     "_desc_party_ips": "IP addresses of each party, ordered by party number",
-    "party_ips": ["169.254.142.101", "169.254.83.42"],
+    "party_ips": ["169.254.142.101", "169.254.142.101"],
 
     "_desc_party_users": "Usernames for each party, ordered by party number. Can be used by scripts to SSH into machines if necessary to start piranha processes",
     "party_users": [],
