@@ -8,6 +8,7 @@ class Precompute
 {
 private:
     size_t precomputeSz = 0;
+    size_t compressedPrecomputeSz = 0;
     void initialize();
 
 public:
@@ -19,9 +20,23 @@ public:
         return precomputeSz;
     }
 
+    size_t getCompressedSz()
+    {
+        return compressedPrecomputeSz;
+    }
+
     void clearSz()
     {
         precomputeSz = 0;
+        compressedPrecomputeSz = 0;
+    }
+
+    template <typename T>
+    size_t getCompressedSz(size_t sz)
+    {
+        // printf("Sz=%lu\n", sz);
+        assert((sz & 1ULL) == 0);
+        return (sz / 2) * sizeof(T);
     }
 
     template <typename T, typename Share>
@@ -44,6 +59,8 @@ public:
         z.fill(0);
 
         precomputeSz += ((x.size() + y.size() + z.size()) * sizeof(T));
+        compressedPrecomputeSz += getCompressedSz<T>(z.size());
+        // printf("Conv Beaver triples=%lu\n", sizeof(T));
     }
 
     template <typename T, typename Share>
@@ -66,6 +83,7 @@ public:
         z.fill(0);
 
         precomputeSz += ((x.size() + y.size() + z.size()) * sizeof(T));
+        compressedPrecomputeSz += getCompressedSz<T>(z.size());
     }
 
     template <typename T, typename Share>
@@ -88,6 +106,7 @@ public:
         z.fill(0);
 
         precomputeSz += ((x.size() + y.size() + z.size()) * sizeof(T));
+        compressedPrecomputeSz += getCompressedSz<T>(z.size());
     }
 
     template <typename T, typename Share>
@@ -109,6 +128,8 @@ public:
         z.fill(shared);
 
         precomputeSz += ((x.size() + y.size() + z.size()) * sizeof(T));
+        compressedPrecomputeSz += getCompressedSz<T>(z.size());
+        // printf("Matrix Beaver triples=%lu\n", sizeof(T));
     }
 
     template <typename T, typename Share>
@@ -120,6 +141,8 @@ public:
         z.fill(1);
 
         precomputeSz += ((x.size() + y.size() + z.size()) * sizeof(T));
+        compressedPrecomputeSz += getCompressedSz<T>(z.size());
+        // printf("Boolean Beaver triples=%lu\n", sizeof(T));
     }
 
     template <typename T, typename Share>
@@ -131,6 +154,8 @@ public:
         z.fill(1);
 
         precomputeSz += ((x.size() + y.size() + z.size()) * sizeof(T));
+        compressedPrecomputeSz += getCompressedSz<T>(z.size());
+        // printf("Beaver triples=%lu\n", sizeof(T));
     }
 
     // Currently, r = 3 and rPrime = 3 * 2^d
@@ -148,6 +173,8 @@ public:
         r.fill(1);
 
         precomputeSz += (2 * size * sizeof(T));
+        compressedPrecomputeSz += getCompressedSz<T>(r.size());
+        // printf("Divided shares=%lu\n", sizeof(T));
     }
 
     // Currently, r = 3 and rPrime = 3 * 2^d
@@ -166,5 +193,7 @@ public:
         r.fill(1);
 
         precomputeSz += (2 * size * sizeof(T));
+        compressedPrecomputeSz += getCompressedSz<T>(r.size());
+        // printf("Divided shares=%lu\n", sizeof(T));
     }
 };

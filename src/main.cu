@@ -320,6 +320,7 @@ void train(NeuralNetwork<T, Share> *net, NeuralNetConfig *config, std::string ru
             updateAccuracy(net, batch_labels, correct);
 
             printf("Key size=%lu B\n", PrecomputeObject.getSz());
+            printf("Compressed key size=%lu B\n", PrecomputeObject.getCompressedSz());
 
             if (piranha_config["eval_inference_stats"]) {
                 double fw_ms = toplevel_profiler.get_elapsed("fw-pass");
