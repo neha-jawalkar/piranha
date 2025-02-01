@@ -1,0 +1,164 @@
+run unit tests? false
+config network: "files/models/vgg16-cifar10-norelu.json"
+network filename: files/models/vgg16-cifar10-norelu.json
+----------------------------------------------
+(1) CNN Layer		  32 x 32 x 3
+			  3 x 3  	(Filter Size)
+			  1 , 1 	(Stride, padding)
+			  256		(Batch Size)
+			  32 x 32 x 64 	(Output)
+----------------------------------------------
+(2) ReLU Layer		  256 x 65536
+----------------------------------------------
+(3) CNN Layer		  32 x 32 x 64
+			  3 x 3  	(Filter Size)
+			  1 , 1 	(Stride, padding)
+			  256		(Batch Size)
+			  32 x 32 x 64 	(Output)
+----------------------------------------------
+(4) Averagepool Layer	  32 x 32 x 64
+			  2  		(Pooling Size)
+			  2 		(Stride)
+			  256		(Batch Size)
+----------------------------------------------
+(5) ReLU Layer		  256 x 16384
+----------------------------------------------
+(6) CNN Layer		  16 x 16 x 64
+			  3 x 3  	(Filter Size)
+			  1 , 1 	(Stride, padding)
+			  256		(Batch Size)
+			  16 x 16 x 128 	(Output)
+----------------------------------------------
+(7) ReLU Layer		  256 x 32768
+----------------------------------------------
+(8) CNN Layer		  16 x 16 x 128
+			  3 x 3  	(Filter Size)
+			  1 , 1 	(Stride, padding)
+			  256		(Batch Size)
+			  16 x 16 x 128 	(Output)
+----------------------------------------------
+(9) Averagepool Layer	  16 x 16 x 128
+			  2  		(Pooling Size)
+			  2 		(Stride)
+			  256		(Batch Size)
+----------------------------------------------
+(10) ReLU Layer		  256 x 8192
+----------------------------------------------
+(11) CNN Layer		  8 x 8 x 128
+			  3 x 3  	(Filter Size)
+			  1 , 1 	(Stride, padding)
+			  256		(Batch Size)
+			  8 x 8 x 256 	(Output)
+----------------------------------------------
+(12) ReLU Layer		  256 x 16384
+----------------------------------------------
+(13) CNN Layer		  8 x 8 x 256
+			  3 x 3  	(Filter Size)
+			  1 , 1 	(Stride, padding)
+			  256		(Batch Size)
+			  8 x 8 x 256 	(Output)
+----------------------------------------------
+(14) ReLU Layer		  256 x 16384
+----------------------------------------------
+(15) CNN Layer		  8 x 8 x 256
+			  3 x 3  	(Filter Size)
+			  1 , 1 	(Stride, padding)
+			  256		(Batch Size)
+			  8 x 8 x 256 	(Output)
+----------------------------------------------
+(16) Averagepool Layer	  8 x 8 x 256
+			  2  		(Pooling Size)
+			  2 		(Stride)
+			  256		(Batch Size)
+----------------------------------------------
+(17) ReLU Layer		  256 x 4096
+----------------------------------------------
+(18) CNN Layer		  4 x 4 x 256
+			  3 x 3  	(Filter Size)
+			  1 , 1 	(Stride, padding)
+			  256		(Batch Size)
+			  4 x 4 x 512 	(Output)
+----------------------------------------------
+(19) ReLU Layer		  256 x 8192
+----------------------------------------------
+(20) CNN Layer		  4 x 4 x 512
+			  3 x 3  	(Filter Size)
+			  1 , 1 	(Stride, padding)
+			  256		(Batch Size)
+			  4 x 4 x 512 	(Output)
+----------------------------------------------
+(21) ReLU Layer		  256 x 8192
+----------------------------------------------
+(22) CNN Layer		  4 x 4 x 512
+			  3 x 3  	(Filter Size)
+			  1 , 1 	(Stride, padding)
+			  256		(Batch Size)
+			  4 x 4 x 512 	(Output)
+----------------------------------------------
+(23) Averagepool Layer	  4 x 4 x 512
+			  2  		(Pooling Size)
+			  2 		(Stride)
+			  256		(Batch Size)
+----------------------------------------------
+(24) ReLU Layer		  256 x 2048
+----------------------------------------------
+(25) CNN Layer		  2 x 2 x 512
+			  3 x 3  	(Filter Size)
+			  1 , 1 	(Stride, padding)
+			  256		(Batch Size)
+			  2 x 2 x 512 	(Output)
+----------------------------------------------
+(26) ReLU Layer		  256 x 2048
+----------------------------------------------
+(27) CNN Layer		  2 x 2 x 512
+			  3 x 3  	(Filter Size)
+			  1 , 1 	(Stride, padding)
+			  256		(Batch Size)
+			  2 x 2 x 512 	(Output)
+----------------------------------------------
+(28) ReLU Layer		  256 x 2048
+----------------------------------------------
+(29) CNN Layer		  2 x 2 x 512
+			  3 x 3  	(Filter Size)
+			  1 , 1 	(Stride, padding)
+			  256		(Batch Size)
+			  2 x 2 x 512 	(Output)
+----------------------------------------------
+(30) Averagepool Layer	  2 x 2 x 512
+			  2  		(Pooling Size)
+			  2 		(Stride)
+			  256		(Batch Size)
+----------------------------------------------
+(31) ReLU Layer		  256 x 512
+----------------------------------------------
+(32) FC Layer		  512 x 256
+			  256		 (Batch Size)
+----------------------------------------------
+(33) ReLU Layer		  256 x 256
+----------------------------------------------
+(34) FC Layer		  256 x 256
+			  256		 (Batch Size)
+----------------------------------------------
+(35) ReLU Layer		  256 x 256
+----------------------------------------------
+(36) FC Layer		  256 x 10
+			  256		 (Batch Size)
+TRAINING, EPOCHS = 10 ITERATIONS = 234
+Key size=21194143232 B
+Compressed key size=3743174656 B
+inference iteration (ms),488285.451000
+inference TX comm (bytes),1245226496
+inference RX comm (bytes),1245226496
+
+-------------------
+Communication rounds: 474
+-------------------
+Key size=21194143232 B
+Compressed key size=3743174656 B
+inference iteration (ms),483366.883000
+inference TX comm (bytes),1245226496
+inference RX comm (bytes),1245226496
+
+-------------------
+Communication rounds: 948
+-------------------

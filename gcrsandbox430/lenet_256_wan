@@ -1,0 +1,101 @@
+run unit tests? false
+config network: "files/models/lenet-norelu-avgpool.json"
+network filename: files/models/lenet-norelu-avgpool.json
+----------------------------------------------
+(1) CNN Layer		  28 x 28 x 1
+			  5 x 5  	(Filter Size)
+			  1 , 0 	(Stride, padding)
+			  256		(Batch Size)
+			  24 x 24 x 20 	(Output)
+----------------------------------------------
+(2) Averagepool Layer	  24 x 24 x 20
+			  2  		(Pooling Size)
+			  2 		(Stride)
+			  256		(Batch Size)
+----------------------------------------------
+(3) ReLU Layer		  256 x 2880
+----------------------------------------------
+(4) CNN Layer		  12 x 12 x 20
+			  5 x 5  	(Filter Size)
+			  1 , 0 	(Stride, padding)
+			  256		(Batch Size)
+			  8 x 8 x 50 	(Output)
+----------------------------------------------
+(5) Averagepool Layer	  8 x 8 x 50
+			  2  		(Pooling Size)
+			  2 		(Stride)
+			  256		(Batch Size)
+----------------------------------------------
+(6) ReLU Layer		  256 x 800
+----------------------------------------------
+(7) FC Layer		  800 x 500
+			  256		 (Batch Size)
+----------------------------------------------
+(8) ReLU Layer		  256 x 500
+----------------------------------------------
+(9) FC Layer		  500 x 10
+			  256		 (Batch Size)
+TRAINING, EPOCHS = 10 ITERATIONS = 234
+Key size=552428832 B
+Compressed key size=106654720 B
+inference iteration (ms),15017.713000
+inference TX comm (bytes),348770592
+inference RX comm (bytes),348770592
+
+-------------------
+Communication rounds: 99
+-------------------
+Key size=552428832 B
+Compressed key size=106654720 B
+inference iteration (ms),14696.112000
+inference TX comm (bytes),348770592
+inference RX comm (bytes),348770592
+
+-------------------
+Communication rounds: 198
+-------------------
+Key size=552428832 B
+Compressed key size=106654720 B
+inference iteration (ms),14406.487000
+inference TX comm (bytes),348770592
+inference RX comm (bytes),348770592
+
+-------------------
+Communication rounds: 297
+-------------------
+Key size=552428832 B
+Compressed key size=106654720 B
+inference iteration (ms),14404.103000
+inference TX comm (bytes),348770592
+inference RX comm (bytes),348770592
+
+-------------------
+Communication rounds: 396
+-------------------
+Key size=552428832 B
+Compressed key size=106654720 B
+inference iteration (ms),14404.990000
+inference TX comm (bytes),348770592
+inference RX comm (bytes),348770592
+
+-------------------
+Communication rounds: 495
+-------------------
+Key size=552428832 B
+Compressed key size=106654720 B
+inference iteration (ms),14403.209000
+inference TX comm (bytes),348770592
+inference RX comm (bytes),348770592
+
+-------------------
+Communication rounds: 594
+-------------------
+Key size=552428832 B
+Compressed key size=106654720 B
+inference iteration (ms),14410.654000
+inference TX comm (bytes),348770592
+inference RX comm (bytes),348770592
+
+-------------------
+Communication rounds: 693
+-------------------

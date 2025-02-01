@@ -1,0 +1,1439 @@
+run unit tests? false
+config network: "files/models/secureml-norelu.json"
+network filename: files/models/secureml-norelu.json
+----------------------------------------------
+(1) FC Layer		  784 x 128
+			  256		 (Batch Size)
+----------------------------------------------
+(2) ReLU Layer		  256 x 128
+----------------------------------------------
+(3) FC Layer		  128 x 128
+			  256		 (Batch Size)
+----------------------------------------------
+(4) ReLU Layer		  256 x 128
+----------------------------------------------
+(5) FC Layer		  128 x 10
+			  256		 (Batch Size)
+TRAINING, EPOCHS = 10 ITERATIONS = 234
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),85.932000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 66
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),80.988000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 132
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.098000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 198
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.754000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 264
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.132000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 330
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.860000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 396
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.377000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 462
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.192000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 528
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.128000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 594
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.088000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 660
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.376000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 726
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.259000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 792
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.343000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 858
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),80.890000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 924
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.979000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 990
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.985000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1056
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.251000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1122
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.817000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1188
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),80.572000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1254
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.355000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1320
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.353000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1386
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.830000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1452
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.802000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1518
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),82.475000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1584
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.735000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1650
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.116000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1716
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.618000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1782
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.339000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1848
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.457000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1914
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.836000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 1980
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.468000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2046
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.837000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2112
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.097000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2178
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.717000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2244
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.518000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2310
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.412000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2376
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),76.727000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2442
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.176000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2508
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),76.113000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2574
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.276000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2640
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),76.692000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2706
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.187000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2772
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.249000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2838
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.663000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2904
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),82.185000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 2970
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.143000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3036
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),81.088000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3102
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.480000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3168
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.889000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3234
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),76.565000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3300
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),76.026000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3366
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),75.654000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3432
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.318000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3498
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.608000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3564
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.419000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3630
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.566000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3696
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.679000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3762
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.759000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3828
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.749000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3894
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.916000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 3960
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),80.196000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4026
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.419000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4092
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.485000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4158
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.579000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4224
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.477000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4290
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),81.262000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4356
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),80.868000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4422
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.603000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4488
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),80.292000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4554
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.879000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4620
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.199000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4686
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.706000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4752
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.180000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4818
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.527000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4884
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.964000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 4950
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.423000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5016
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.320000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5082
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.576000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5148
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.860000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5214
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.392000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5280
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.164000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5346
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.878000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5412
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.163000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5478
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.927000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5544
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),76.371000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5610
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.353000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5676
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.102000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5742
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.375000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5808
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.033000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5874
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),76.388000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 5940
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.464000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6006
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),80.383000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6072
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.165000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6138
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),85.590000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6204
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.575000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6270
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.927000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6336
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.569000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6402
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),92.079000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6468
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.770000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6534
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.021000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6600
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.062000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6666
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.076000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6732
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.522000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6798
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.889000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6864
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),81.199000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6930
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.644000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 6996
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.241000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7062
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),76.924000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7128
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.828000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7194
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.440000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7260
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.913000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7326
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.001000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7392
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.244000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7458
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.071000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7524
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),82.260000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7590
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),80.629000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7656
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.815000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7722
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.042000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7788
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),80.937000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7854
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.267000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7920
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),82.032000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 7986
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.461000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8052
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.609000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8118
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.949000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8184
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.519000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8250
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.617000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8316
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.898000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8382
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.185000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8448
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.628000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8514
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.599000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8580
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),80.698000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8646
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.125000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8712
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.304000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8778
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.144000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8844
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.394000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8910
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.822000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 8976
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.741000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9042
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.916000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9108
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.834000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9174
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.555000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9240
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),80.819000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9306
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.779000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9372
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.941000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9438
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.365000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9504
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),77.958000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9570
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.863000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9636
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.754000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9702
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.267000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9768
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),81.488000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9834
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),83.875000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9900
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.873000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 9966
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.644000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 10032
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),78.971000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 10098
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),81.258000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 10164
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),81.990000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 10230
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.557000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 10296
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),79.342000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 10362
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),80.829000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 10428
+-------------------

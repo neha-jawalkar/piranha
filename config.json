@@ -45,7 +45,7 @@
     "custom_batch_size": true,
 
     "_desc_custom_batch_size_count": "Desired custom batch size",
-    "custom_batch_size_count": 128,
+    "custom_batch_size_count": 256,
 
     "_desc_nn_seed": "Seed for NN initialization",
     "nn_seed": 343934585,
