@@ -1,0 +1,100 @@
+run unit tests? false
+config network: "files/models/secureml-norelu.json"
+network filename: files/models/secureml-norelu.json
+----------------------------------------------
+(1) FC Layer		  784 x 128
+			  256		 (Batch Size)
+----------------------------------------------
+(2) ReLU Layer		  256 x 128
+----------------------------------------------
+(3) FC Layer		  128 x 128
+			  256		 (Batch Size)
+----------------------------------------------
+(4) ReLU Layer		  256 x 128
+----------------------------------------------
+(5) FC Layer		  128 x 10
+			  256		 (Batch Size)
+TRAINING, EPOCHS = 10 ITERATIONS = 234
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),3573.320000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 66
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),2578.325000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 132
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),2576.245000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 198
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),2579.425000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 264
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),2583.732000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 330
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),2586.974000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 396
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),2585.498000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 462
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),2585.305000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 528
+-------------------
+Key size=31053824 B
+Compressed key size=4935680 B
+inference iteration (ms),2586.010000
+inference TX comm (bytes),21792768
+inference RX comm (bytes),21792768
+
+-------------------
+Communication rounds: 594
+-------------------
+ERROR writing to socket: -1 (errno 104)
+Send vector error
